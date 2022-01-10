@@ -1,0 +1,19 @@
+---
+- name: Reiniciar contenedor.
+  docker_container:
+    name: '{{ container }}'
+    state: started
+    restart: yes
+  tags: restart
+
+- name: Detener contenedor.
+  docker_container:
+    name: '{{ container }}'
+    state: stopped
+  tags: stop
+
+- name: Levantar contenedor.
+  docker_container:
+    name: '{{ container }}'
+    state: started
+  tags: start.

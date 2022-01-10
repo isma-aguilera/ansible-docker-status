@@ -1,0 +1,5 @@
+---
+- name: Playbok para autmatizar el estado de los contenedores.
+  hosts: all
+  roles:
+    - roles/ansible-docker-status
